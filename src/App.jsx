@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, {  useState, useEffect } from 'react'
 import './App.css'
+import { TodoProvider } from './Contexts/TodoContext';
+import { TodoForm } from './components';
 
 function App() {
   const [todos, setTodos] = useState([])  // State to hold the list of todos
@@ -22,6 +24,15 @@ const deleteTodo = (id) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id)) // Remove the todo with the matching id
   }
 
+  useEffect(() => { 
+    const todos = JSON.parse( localStorage.getItem('todos')) || []; // Retrieve todos from localStorage
+    setTodos(todos); // Set the retrieved todos to state
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos)); // Store todos in localStorage whenever they change
+  }, [todos]);
+
 // Function to toggle the completion status of a todo by id
   const toggleComplete = (id) => {
     setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? {...prevTodo, completed:!prevTodo.completed}: prevTodo)   // Toggle the completed status
@@ -35,9 +46,16 @@ const deleteTodo = (id) => {
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">
                         {/* Todo form goes here */} 
+                        <TodoForm />
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
+                        {todos.map((todo) => (
+                            <div key={todo.id} className="w-full mb-2">
+                                <TodoItem todo={todo} />
+                            </div>
+                        ))}
+
                     </div>
                 </div>
             </div>
