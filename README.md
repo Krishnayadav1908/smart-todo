@@ -60,7 +60,7 @@ Remove tasks permanently from the list.
 Follow these steps to run the project locally on your machine.
 
 📸 Screenshots
-![Todo App Screenshot](todocontextLocal/public/TodoScreenshot.png)
+![Todo App Screenshot](TodoScreenshot.png)
 
 ### 1️⃣ Clone the repository
 
