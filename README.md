@@ -1,16 +1,75 @@
-# React + Vite
+## 📝 Todo App (React + Context API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Todo Application built using React, Context API, and localStorage.
+This app helps users manage their daily tasks efficiently with a clean and user-friendly UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+➕ Add new todos
 
-## React Compiler
+✏️ Edit existing todos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Mark todos as completed
 
-## Expanding the ESLint configuration
+❌ Delete todos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💾 Persistent data using localStorage
+
+⚡ Fast & responsive
+
+## 🛠️ Tech Stack
+
+- React JS
+- Context API (Global State Management)
+- Tailwind CSS (Styling)
+- LocalStorage (Data Persistence)
+
+## 📂 Project Structure
+
+src/
+│── App.jsx
+│── components/
+│ ├── TodoForm.jsx
+│ └── TodoItem.jsx
+│── Contexts/
+│ └── TodoContext.js
+│── App.css
+│── main.jsx
+
+## 🔄 How It Works
+
+- Global state is managed using Context API
+- Todos are stored in localStorage to persist data
+- UI updates automatically on add, edit, delete, or toggle actions
+- Completed todos cannot be edited (UX decision)
+
+## 🧠 Core Functionalities
+
+Add Todo:
+Users can add a new task using the input form.
+
+Edit Todo:
+Existing todos can be edited unless marked as completed.
+
+Toggle Complete:
+Mark tasks as done using a checkbox.
+
+Delete Todo:
+Remove tasks permanently from the list.
+
+Follow these steps to run the project locally on your machine.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Krishnayadav1908/smart-todo.git
+2️⃣ Navigate to the project folder
+cd todo-app
+
+3️⃣ Install dependencies
+npm install
+
+4️⃣ Start the development server
+npm run dev
+
+```
