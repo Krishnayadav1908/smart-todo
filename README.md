@@ -59,12 +59,15 @@ Remove tasks permanently from the list.
 
 Follow these steps to run the project locally on your machine.
 
+📸 Screenshots
+![Todo App Screenshot](todocontextLocal/public/TodoScreenshot.png)
+
 ### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/Krishnayadav1908/smart-todo.git
 2️⃣ Navigate to the project folder
-cd todo-app
+cd todocontextlocal
 
 3️⃣ Install dependencies
 npm install
